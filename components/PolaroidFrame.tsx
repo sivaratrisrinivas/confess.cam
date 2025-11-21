@@ -99,7 +99,7 @@ export default function PolaroidFrame({ imageUrl, onSave, onCancel }: PolaroidFr
           }}
         >
            {/* Lined Paper Pattern */}
-          <div className="absolute inset-4 border border-zinc-100 bg-white" 
+          <div className="absolute top-4 left-4 right-4 bottom-[15%] border border-zinc-100 bg-white" 
                style={{ 
                  backgroundImage: 'repeating-linear-gradient(transparent, transparent 27px, #e5e7eb 28px)',
                  backgroundPosition: '0 10px'
@@ -120,17 +120,17 @@ export default function PolaroidFrame({ imageUrl, onSave, onCancel }: PolaroidFr
             </div>
           </div>
 
-          <div className="absolute bottom-0 left-0 right-0 h-[15%] px-5 flex items-center justify-between">
+          <div className="absolute bottom-0 left-0 right-0 h-[15%] px-5 flex items-center justify-between z-20">
               <button
                 onClick={onCancel}
-                className="text-[10px] font-mono text-zinc-300 hover:text-zinc-500 tracking-[0.2em] uppercase transition-colors"
+                className="text-[10px] font-mono text-zinc-300 hover:text-zinc-500 tracking-[0.2em] uppercase transition-colors cursor-pointer"
               >
                 CANCEL
               </button>
               <button
                 onClick={handleSave}
                 disabled={!text.trim()}
-                className="text-[10px] font-mono text-orange-500 hover:text-orange-600 font-bold tracking-[0.2em] uppercase disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2"
+                className="text-[10px] font-mono text-orange-500 hover:text-orange-600 font-bold tracking-[0.2em] uppercase disabled:opacity-50 disabled:cursor-not-allowed transition-colors flex items-center gap-2 cursor-pointer"
               >
                 <motion.span
                   animate={text.trim() ? {
